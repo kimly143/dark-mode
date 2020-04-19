@@ -10,8 +10,8 @@ export default function useLocalStorage(key, initialValue) {
 	});
 
 	const setValue = useCallback((newValue) => {
-		setStoredValue(value);
-		localStorage.setItem(key, JSON.stringify(value));
+		setStoredValue(newValue);
+		localStorage.setItem(key, JSON.stringify(newValue));
 	});
 
 	return [ storedValue, setValue ];
